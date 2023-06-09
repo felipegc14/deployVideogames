@@ -13,14 +13,14 @@ export const CLEAR_DETAIL = "CLEAR_DETAIL";
 
 export const getVideogames = () => {
     return async(dispatch) => {
-        return await axios.get('http://localhost:3001/videogames')
+        return await axios.get('/videogames')
         .then(res => dispatch({type: GET_VIDEOGAMES, payload: res.data}))
     }
 };
 
 export const getGenres = () => {
     return async(dispatch) => {
-        return await axios.get('http://localhost:3001/genres')
+        return await axios.get('/genres')
         .then(res => dispatch({type: GET_GENRES, payload: res.data}))
     }
 };
@@ -28,7 +28,7 @@ export const getGenres = () => {
 export const getDetails = (id) => {
     return async(dispatch) => {
         try {
-            return await axios.get(`http://localhost:3001/videogame/${id}`)
+            return await axios.get(`/videogame/${id}`)
             .then(res => dispatch({type: GET_DETAILS, payload: res.data}))
         } catch (error) {
             alert(error)
@@ -39,7 +39,7 @@ export const getDetails = (id) => {
 export const searchByName = (name) => {
     return async(dispatch) => {
         try {
-            return await axios.get(`http://localhost:3001/videogames?name=${name}`)
+            return await axios.get(`/videogames?name=${name}`)
             .then(res => dispatch({type: SEARCH_BY_NAME, payload: res.data}))
         } catch (error) {
             alert(error)
@@ -49,7 +49,7 @@ export const searchByName = (name) => {
 
 export const createVideogame = (payload) => {
     return async(dispatch) => {
-        const create = await axios.post('http://localhost:3001/videogame', payload)
+        const create = await axios.post('/videogame', payload)
         console.log("info create: ", create)
         return dispatch({
             type: CREATE_VIDEOGAME, create
