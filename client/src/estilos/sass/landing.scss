@@ -1,0 +1,37 @@
+
+.landingPage {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background-image: url('../../images/desktop-bg-3.jpg');
+    background-color: #041C32;
+    //background-image: url(../../images/mobile-background-image.jpg);
+    //background-size: 50%; 
+}
+
+.linkHome{
+    text-decoration: none;
+}
+
+.landingButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    border: 2px solid #64ffda;
+    font-size: 20px;
+    color: aliceblue;
+    background-color: transparent;
+    //background-color: #041C32;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.landingButton:hover {
+    background-color: #64ffdb43;
+    transition: .3s;
+    transform: translateY(2px);
+}
