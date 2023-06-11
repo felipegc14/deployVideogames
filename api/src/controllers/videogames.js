@@ -58,7 +58,7 @@ async function getAllVideogames(req, res, next) {
     } 
 
     try {
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 2; i++) {
         const info = await axios.get(`${pages[i]}`);
         pages.push(info.data.next);
 
