@@ -1,10 +1,10 @@
-require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 /* const Videogame = require('./models/Videogame')
 const Genres = require('./models/Genres') */
 //const modelVideogame = require('./Models/Videogame');
+require('dotenv').config();
 const {
   DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_PORT
 } = process.env;
